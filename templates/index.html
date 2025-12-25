@@ -2,13 +2,11 @@
     {% extends "base.html" %}
 
     {% block content %}
-    <form action="" method="post" novalidate>
-        {{ form.hidden_tag() }}
-
-        <p>{{ form.model(style="width: 200px; height: 100px;") }}</p>
-        <p>{{ form.gantt(style="width: 200px; height: 100px;") }}</p>
-
-    </form>
+    <div class="long-text">
+    {% for paragraph in text %}
+        <pre style="font-size: 20px">{{ paragraph }}</pre>
+    {% endfor %}
+    </div>
     {% endblock %}
 </html>
 

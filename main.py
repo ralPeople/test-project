@@ -27,7 +27,7 @@ def base():
     return redirect(url_for('bp_index.index'))
 
 if __name__ == '__main__':
-    if os.environ.get("RENDER") is None:  # Проверяем, что это не Render
+    if os.environ.get("RENDER") is None:
         app.run(debug=True)
 
 
