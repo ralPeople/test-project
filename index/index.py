@@ -26,8 +26,8 @@ def index():
     # Преобразуем NTP время в datetime
     ntp_time = datetime.fromtimestamp(response.tx_time, tz=timezone.utc)
     ntp_time = ntp_time + timedelta(hours=4)
-    #is_correct_date = ntp_time.date() == datetime(2026, 1, 1).date()
-    is_correct_date = ntp_time.date() == datetime(2025, 12, 27).date()
+    is_correct_date = ntp_time.date() == datetime(2026, 1, 1).date()
+    #is_correct_date = ntp_time.date() == datetime(2025, 12, 27).date()
 
     text = "Текст закрыт до Нового года, типо, да..."
     if is_correct_date:
